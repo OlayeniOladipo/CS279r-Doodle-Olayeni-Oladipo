@@ -5,7 +5,6 @@ Implement a user-testable version of Doodle
 September 21, 2022
 
 **Instructions to launch prototype:**
-
 1) Clone or download this repo, saving the files to a directory
 2) Open terminal and CD into the directory of the downloaded files.
 3) Enter in terminal the below:
@@ -19,6 +18,7 @@ The web app will appear, and you may feel free to peruse the following functiona
 1) Enter your name as the user
 2) Select Yes, No, or Maybe per timeslot
 3) Press submit (though nothing will happen when you do this)
+4) This process allows you to see other's availability and select your availability per denoted day and time.
 
 We manually-coded in example people and their availability.
 
