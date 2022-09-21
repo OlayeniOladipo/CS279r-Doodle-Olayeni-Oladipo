@@ -27,4 +27,5 @@ Basic Code for making a table in HTML was gotten from the following link:
 
 Additional examples of HTML style changes or attributes came from here.
 - w3schools.com/html/html_table_sizes.asp
+- https://www.w3schools.com/html/html_table_borders.asp
 - https://www.tutorialspoint.com/How-to-center-align-text-in-table-cells-in-HTML#:~:text=To%20center%20align%20text%20in%20table%20cells%2C%20use%20the%20CSS,align%20text%20in%20table%20cells.
