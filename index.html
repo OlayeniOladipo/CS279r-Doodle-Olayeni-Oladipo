@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- <head> is the container for metadata/information about the web page's
+        properties. It also includes relevant links for fetching fonts and the
+        stylesheet (.css) file that informs for style of the page.  -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Doodle</title>
+	<!--  CSS Import: Import the CSS Stylesheet.  -->
+	<!-- <link rel="ABC" href="XYZ"> specifies relationship "ABC" between an
+          external resource and the current document-->
+	<link rel="stylesheet" href="main.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+	<!-- rel="preconnect" tells the browser to form a connection to the resource. -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<!-- crossorigin allows for fetching resources from multiple sources/origins. -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- Given the connected font, you can access them in the main.css stylesheet. -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<!-- App Wrapper: This is where the main sections and formatting goes. <main>
+         creates a "container for content". Pages should only have one <main> element. -->
+	<main class="app">
+		<!-- Greeting -->
+		<!-- <section class="ABC"> defines a <section> and assigns a class with 
+            classname "ABC" to the section. Classe determine the style of the 
+            element, and the classnames are defined in the CSS Stylesheet. -->
+		<section class="greeting">
+			<!-- <h2> is an HTML header like h1 through h6 where h1 is the most
+                important heading and h6 the least. There are additional attributes
+                that can define margins, font weight, etc. With any header may be
+                many elements. -->
+			<h2 class="title">
+				<!-- Below creates an input control that can take in user inputs.
+                The type of the input vary from  a text field and radio buttons to
+                checkboxes and submit buttons. id defines a unique identifier name 
+                for the input and placeholder provides a text hint.  -->
+				Doodle - Mark Your Availability
+			</h2>
+			<h3>Enter 'yes' 'maybe' or 'no' for each timeslot!</h3>
+		</section>
+		<!-- End of Greeting -->
+
+		<section class="schedule">
+			<!-- Table  -->
+			<table class="table table-bordered" border=solid 1px #295ec7>
+				<!-- Table header using different header styles -->
+				<thead>
+					<tr>
+						<th>3 Participants</th>
+						<th>
+							<h2>Oct 11</h2>
+							<h5>Wednesday</h5> 9-10am
+						</th>
+						<th>
+							<h2>Oct 11</h2>
+							<h5>Wednesday</h5> 10-11am
+						</th>
+						<th>
+							<h2>Oct 11</h2>
+							<h5>Wednesday</h5> 11-12pm
+						</th>
+						<th>
+							<h2>Oct 11</h2>
+							<h5>Wednesday</h5> 12-1pm
+						</th>
+						<th>
+							<h2>Oct 11</h2>
+							<h5>Wednesday</h5> 1-2pm
+						</th>
+						<th>
+							<h2>Oct 12</h2>
+							<h5>Thursday</h5> 10-11am
+						</th>
+						<th>
+							<h2>Oct 12</h2>
+							<h5>Thursday</h5> 11-12pm
+						</th>
+						<th>
+							<h2>Oct 12</h2>
+							<h5>Thursday</h5> 12-1pm
+						</th>
+					</tr>
+				</thead>
+				<!-- END of Table header -->
+
+				<!-- Table body using style attributes, class IDs for reference in the CSS file
+				     and for= to have the text show up in the table. -->
+				<tbody>
+					<tr style="text-align:center">
+						<th scope="row">
+							<div class="custom-control">
+								<label class="name" for="tableDefaultCheck1">John Rodgers</label>
+							</div>
+						</th>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label no" for="tableDefaultCheck1">No</span>
+						</td>
+						<td>
+							<span class="label no" for="tableDefaultCheck1">No</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label maybe" for="tableDefaultCheck1">Maybe</span>
+						</td>
+						<td>
+							<span class="label maybe" for="tableDefaultCheck1">Maybe</span>
+						</td>
+					</tr>
+					<tr style="text-align:center">
+						<th scope="row">
+							<div class="custom-control custom-checkbox">
+								<label class="name" for="tableDefaultCheck1">Tiffany Li</label>
+							</div>
+						</th>
+						<td>
+							<span class="label no" for="tableDefaultCheck1">No</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label maybe" for="tableDefaultCheck1">Maybe</span>
+						</td>
+						<td>
+							<span class="label no" for="tableDefaultCheck1">No</span>
+						</td>
+						<td>
+							<span class="label no" for="tableDefaultCheck1">No</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+					</tr>
+					<tr style="text-align:center">
+						<th scope="row">
+							<div class="custom-control">
+								<label class="name" for="tableDefaultCheck1">Peter Kim</label>
+							</div>
+						</th>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+						<td>
+							<span class="label maybe" for="tableDefaultCheck1">Maybe</span>
+						</td>
+						<td>
+							<span class="label no" for="tableDefaultCheck1">No</span>
+						</td>
+						<td>
+							<span class="label yes" for="tableDefaultCheck1">Yes</span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							<div class="custom-control">
+								<input type="text" id="name" placeholder="Name here" />
+							</div>
+						</th>
+						<td>
+							<div class="options">
+								<label>
+									<input type="radio" name="category" id="yes" value="yes" />
+									<span class="bubble yes"></span>
+									<h4>Yes</h4>
+								</label>
+								<label>
+									<input type="radio" name="category" id="no" value="no" />
+									<span class="bubble no"></span>
+									<h4>No</h4>
+								</label>
+								<label>
+									<input type="radio" name="category" id="maybe" value="maybe" />
+									<span class="bubble maybe"></span>
+									<h4>Maybe</h4>
+								</label>
+							</div>
+						</td>
+						<td>
+							<div class="options">
+								<label>
+									<input type="radio" name="category1" id="yes" value="yes" />
+									<span class="bubble yes"></span>
+									<h4>Yes</h4>
+								</label>
+								<label>
+									<input type="radio" name="category1" id="no" value="no" />
+									<span class="bubble no"></span>
+									<h4>No</h4>
+								</label>
+								<label>
+									<input type="radio" name="category1" id="maybe" value="maybe" />
+									<span class="bubble maybe"></span>
+									<h4>Maybe</h4>
+								</label>
+							</div>
+						</td>
+						<td>
+							<div class="options">
+								<label>
+									<input type="radio" name="category2" id="yes" value="yes" />
+									<span class="bubble yes"></span>
+									<h4>Yes</h4>
+								</label>
+								<label>
+									<input type="radio" name="category2" id="no" value="no" />
+									<span class="bubble no"></span>
+									<h4>No</h4>
+								</label>
+								<label>
+									<input type="radio" name="category2" id="maybe" value="maybe" />
+									<span class="bubble maybe"></span>
+									<h4>Maybe</h4>
+								</label>
+							</div>
+						</td>
+						<td>
+							<div class="options">
+								<label>
+									<input type="radio" name="category3" id="yes" value="yes" />
+									<span class="bubble yes"></span>
+									<h4>Yes</h4>
+								</label>
+								<label>
+									<input type="radio" name="category3" id="no" value="no" />
+									<span class="bubble no"></span>
+									<h4>No</h4>
+								</label>
+								<label>
+									<input type="radio" name="category3" id="maybe" value="maybe" />
+									<span class="bubble maybe"></span>
+									<h4>Maybe</h4>
+								</label>
+							</div>
+						</td>
+						<td>
+							<div class="options">
+								<label>
+									<input type="radio" name="category4" id="yes" value="yes" />
+									<span class="bubble yes"></span>
+									<h4>Yes</h4>
+								</label>
+								<label>
+									<input type="radio" name="category4" id="no" value="no" />
+									<span class="bubble no"></span>
+									<h4>No</h4>
+								</label>
+								<label>
+									<input type="radio" name="category4" id="maybe" value="maybe" />
+									<span class="bubble maybe"></span>
+									<h4>Maybe</h4>
+								</label>
+							</div>
+						</td>
+						<td>
+							<div class="options">
+								<label>
+									<input type="radio" name="category5" id="yes" value="yes" />
+									<span class="bubble yes"></span>
+									<h4>Yes</h4>
+								</label>
+								<label>
+									<input type="radio" name="category5" id="no" value="no" />
+									<span class="bubble no"></span>
+									<h4>No</h4>
+								</label>
+								<label>
+									<input type="radio" name="category5" id="maybe" value="maybe" />
+									<span class="bubble maybe"></span>
+									<h4>Maybe</h4>
+								</label>
+							</div>
+						</td>
+						<td>
+							<div class="options">
+								<label>
+									<input type="radio" name="category6" id="yes" value="yes" />
+									<span class="bubble yes"></span>
+									<h4>Yes</h4>
+								</label>
+								<label>
+									<input type="radio" name="category6" id="no" value="no" />
+									<span class="bubble no"></span>
+									<h4>No</h4>
+								</label>
+								<label>
+									<input type="radio" name="category6" id="maybe" value="maybe" />
+									<span class="bubble maybe"></span>
+									<h4>Maybe</h4>
+								</label>
+							</div>
+						</td>
+						<td>
+							<div class="options">
+								<label>
+									<input type="radio" name="category7" id="yes" value="yes" />
+									<span class="bubble yes"></span>
+									<h4>Yes</h4>
+								</label>
+								<label>
+									<input type="radio" name="category7" id="no" value="no" />
+									<span class="bubble no"></span>
+									<h4>No</h4>
+								</label>
+								<label>
+									<input type="radio" name="category7" id="maybe" value="maybe" />
+									<span class="bubble maybe"></span>
+									<h4>Maybe</h4>
+								</label>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				<!-- Table body -->
+			</table>
+			<!-- Table  -->
+
+			<button type="button" class="button">Submit</button>
+		</section>
+		<!-- End of Section -->
+
+	</main>
+	<!-- End of App Wrapper -->
+
+	<!-- REMOVED as I only care about clicking of button functionality right now
+	JS Import - inport the javascript file that defines functionality. 
+	<script src="main.js"></script>
+	End of JS Import-->
+</body>
+
+</html>

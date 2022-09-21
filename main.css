@@ -1,0 +1,231 @@
+/* Variables */
+/* :root selector matches the root element (html) of the document.
+   Varibles here may be used globally throughout the file. */
+:root {
+	--primary: #c41a1a;
+	--business: #295ec7;
+    --secondary: #dcb43b;
+    /* var( ) insers the value of a CSS variable into another variable*/
+	--personal: var(--primary);
+	--light: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--danger: #d50400;
+
+	--yes: #1bdb41;
+	--no: #d50400;
+	--maybe: #dcb43b;
+
+    /* horizonal | vertical | blur | color */
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+    --secondary-glow: 0px 0px 4px rgba(247, 220, 68, 0.75);
+}
+/* End of Variables */
+
+/* Resets - a list of rules for all browsers on which the page appears. */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* :not[...] allows for certain selectors to be excluded from a style change. */
+input:not([type="radio"]):not([type="checkbox"]), button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+/* End of Resets */
+
+/* Generally, CSS works in the following format:
+   selector { declaration } whereby the selector points to an HTML element
+   and the declaration contains properites and values that define the style.  */
+body {
+	background: var(--light);
+	color: var(--dark);
+}
+
+/* rem stands for root em, a unit of measurement font sizes of root elements. */
+section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+h3 {
+	color: var(--dark);
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 0.5rem;
+}
+
+h4 {
+	color: var(--grey);
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+h5 {
+	color: #491e1d;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+/* Greeting is established in the index.html. */
+.greeting .title {
+    /*flex sets flexible length on the items*/
+    margin-left: flex;
+	color: var(--dark);
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+/* [type="text"] specifices the type of input that we are editing in the 
+   schedule class. */
+.schedule input[type="text"] {
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	padding: 1rem 1.5rem;
+	color: var(--dark);
+	background-color: #FFF;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1.5rem;
+}
+
+.schedule .options {
+	display: flex;
+	padding: 1px;
+}
+
+.schedule .options label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+input[type="radio"] {
+	display: none;
+	align-items: center;
+}
+
+.bubble {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 15px;
+	height: 15px;
+	border-radius: 999px;
+	border: 2px solid var(--business);
+	box-shadow: var(--business-glow);
+}
+
+.bubble.yes {
+	border-color: var(--yes);
+}
+
+.bubble.no {
+	border-color: var(--no);
+}
+
+.bubble.maybe {
+	border-color: var(--maybe);
+}
+
+.label {
+	color: white;
+	padding: 8px;
+  }
+
+.label.yes {
+	justify-content: center;
+	display: flex;
+	background-color: var(--yes);
+}
+.label.no {
+	justify-content: center;
+	display: flex;
+	background-color: var(--no);
+}
+.label.maybe {
+	justify-content: center;
+	display: flex;
+	background-color: var(--maybe);
+}
+
+/* ::after inserts something after a selected element. */
+.bubble::after {
+	content: '';
+	display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	border-radius: 999px;
+	transition: 0.2s ease-in-out;
+}
+
+.bubble.yes::after {
+	background-color: var(--yes);
+	box-shadow: var(--yes);
+}
+.bubble.no::after {
+	background-color: var(--no);
+	box-shadow: var(--no);
+}
+.bubble.maybe::after {
+	background-color: var(--maybe);
+	box-shadow: var(--maybe);
+}
+
+/* ~ symbol is a general sibling selector, selecting all *next* elements
+ that are siblings of the specified element. */
+input:checked ~ .bubble::after {
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+.schedule .options label div {
+	color: var(--dark);
+	font-size: 1.125rem;
+	margin-top: 1rem;
+}
+
+.schedule input[type="submit"] {
+	display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: #FFF;
+	font-weight: 700;
+	/*text-transform: uppercase;*/
+	background-color: var(--secondary);
+	box-shadow: var(--secondary-glow);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: 0.2s ease-out;
+}
+
+.schedule button {
+	display: block;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	color: #FFF;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+	background-color: #5080e1;
+}
+
